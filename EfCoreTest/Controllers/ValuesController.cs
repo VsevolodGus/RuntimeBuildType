@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
-using Microsoft.EntityFrameworkCore;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Collections.ObjectModel;
 using System.Data.Common;
@@ -12,11 +11,8 @@ namespace EfCoreTest.Controllers;
 [ApiController]
 public class ValuesController : ControllerBase
 {
-    private readonly AppDbContext _context;
-
-    public ValuesController(AppDbContext applicationDbContext)
+    public ValuesController()
     {
-        _context = applicationDbContext;
     }
 
     [HttpGet]
